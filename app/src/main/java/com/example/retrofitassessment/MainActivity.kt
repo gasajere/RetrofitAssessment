@@ -18,14 +18,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         itemadapter = Adapter((listOf()))
-        binding.recyclerView.adapter=itemadapter
+        binding.recyclerView.adapter = itemadapter
 
 
-        viewModel= ViewModelProvider(this)[MainViewModel::class.java]
+        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
-        viewModel.apply{
+        viewModel.apply {
             getAllItems()
-            model.observe(this@MainActivity,{items->
+            model.observe(this@MainActivity, { items ->
                 itemadapter.list = items
                 itemadapter.notifyDataSetChanged()
 
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        binding.btn.setOnClickListener{
+        binding.btn.setOnClickListener {
             viewModel.apply {
                 addStudent()
             }

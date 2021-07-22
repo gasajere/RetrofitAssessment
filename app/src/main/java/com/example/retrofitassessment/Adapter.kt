@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.retrofitassessment.databinding.ItemsBinding
 
-class Adapter (var list: List<Items>): RecyclerView.Adapter<Adapter.TodoViewHolder>() {
+class Adapter(var list: List<Items>) : RecyclerView.Adapter<Adapter.TodoViewHolder>() {
 
     class TodoViewHolder(val binding: ItemsBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(items: Items) {
@@ -25,7 +25,7 @@ class Adapter (var list: List<Items>): RecyclerView.Adapter<Adapter.TodoViewHold
 
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
         val singleItems = list.get(position)
-       holder.bind(singleItems)
+        holder.bind(singleItems)
     }
 
     override fun getItemCount(): Int {

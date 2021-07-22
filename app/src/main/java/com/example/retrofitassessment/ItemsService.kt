@@ -12,5 +12,5 @@ interface ItemsService {
     suspend fun getALLItems(): List<Items>
 
     @POST("students")
-    suspend fun addStudent(@Body post:Student): List<Student>
+    suspend fun addStudent(@Body post: Student): List<Student>
 }

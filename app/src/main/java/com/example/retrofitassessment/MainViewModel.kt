@@ -1,4 +1,4 @@
- package com.example.retrofitassessment
+package com.example.retrofitassessment
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 import org.json.JSONObject
 import retrofit2.Response
 
-class MainViewModel: ViewModel() {
+class MainViewModel : ViewModel() {
     val model: MutableLiveData<List<Items>> = MutableLiveData()
     val myResponse: MutableLiveData<List<Student>> = MutableLiveData()
 
@@ -34,7 +34,7 @@ class MainViewModel: ViewModel() {
 //        jsonObject.put("class :","Class B")
             CoroutineScope(Dispatchers.IO).launch {
                 val response: List<Student> =
-                    RetrofitProvider.service.addStudent(Student("B","Sajere Ogaga",16))
+                    RetrofitProvider.service.addStudent(Student("B", "Sajere Ogaga", 16))
 
                 myResponse.postValue(response)
 
