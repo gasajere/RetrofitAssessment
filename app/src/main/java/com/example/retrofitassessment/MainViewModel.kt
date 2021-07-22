@@ -7,7 +7,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.json.JSONObject
-import retrofit2.Response
+
 
 class MainViewModel : ViewModel() {
     val model: MutableLiveData<List<Items>> = MutableLiveData()
